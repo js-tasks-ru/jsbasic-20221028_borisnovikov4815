@@ -1,7 +1,7 @@
 /**
  * Эту функцию трогать не нужно
  */
-function print(text) {
+ function print(text) {
   console.log(text);
 }
 
@@ -10,7 +10,20 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  //name не пустой, без пробелов, >+4char
+  
+if(name != null){
+  if(name != ""){
+    if(name.includes(" ") == false){
+      if(name.length > 3){
+        if(name != "Oleg" && name != "oleg"){
+   return true
+        }
+      }
+    }
+  }
+}
+return false
 }
 
 function sayHello() {
