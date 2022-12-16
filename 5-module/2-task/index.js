@@ -1,3 +1,4 @@
+// Last
 // function toggleText() {
 //   document.addEventListener('click', function(event){
 //     let btn = event.target.className;
@@ -7,6 +8,7 @@
 //   });
 // }
 
+// New
 function toggleText() {
   let toggleButton = document.querySelector('.toggle-text-button');
   let textElement = document.getElementById('text');
