@@ -6,36 +6,7 @@ export default class ProductGrid {
   constructor(products) {
     this.products = products;
     this.filters = {};
-<<<<<<< HEAD
-    this.#render();
-  }
-
-  #render() {
-    this.elem.createElement(`<div class="products-grid">
-    <div class="products-grid__inner"></div></div>`);
-  }
-  
-  renderProductCard() {
-    this.grid("inner").innerHTML = "";
-    for (let product of this.products) {
-      if (this.filters.noNuts && product.nuts) continue;
-      if (this.filters.vegeterianOnly && !product.vegeterian) continue;
-      if (product.spiciness > this.filters.maxSpiciness) continue;
-      if (this.filters.category && product.category != this.filters.category)
-        continue;
-      let productCard = new ProductCard(product);
-      this.grid("inner").append(productCard.elem);
-    }
-  }
-
-  updateFilter(product) {
-    Object.assign(this.filters, product), this.renderProductCard();
-  }
-  grid(el) {
-    return this.elem.querySelector(`.products-grid__${el}`);
-=======
     this.render();
->>>>>>> cccb91e16ef2ad9402af25a74333c444f6b69c61
   }
 
   render() {
